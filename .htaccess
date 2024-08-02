@@ -46,4 +46,6 @@ DirectorySlash Off
   # domain.com/file to domain.com/file.html.
   RewriteCond %{REQUEST_FILENAME}\.html -s
   RewriteRule ^ %{REQUEST_URI}.html [L]
+
+  RedirectMatch ^/$ /histology-static/
 </IfModule>
