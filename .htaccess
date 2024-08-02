@@ -47,5 +47,6 @@ DirectorySlash Off
   RewriteCond %{REQUEST_FILENAME}\.html -s
   RewriteRule ^ %{REQUEST_URI}.html [L]
 
-  RedirectMatch ^/$ /histology-static/
+  RewriteCond %{HTTP_HOST} ^umich-m3.github.io/histology-static$
+  RewriteRule ^$ histology-static [L]
 </IfModule>
